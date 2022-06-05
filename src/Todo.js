@@ -11,7 +11,7 @@ const Todos = ({ list, deleteTodo }) => {
 			)
 		})
 	): (
-		<p className="center">You have no todos left! Yay </p>
+		<p className="center teal lighten-2">You have no todos left! Yay </p>
 	)
 	return (
 		<div className="todos collection">
