@@ -4,7 +4,9 @@ import AddForm from './AddForm'
 import Navbar from './components/Navbar'
 import Home from './components/Home'
 import About from './components/About'
-import { BrowserRouter,Route, Routes } from 'react-router-dom'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import Post from './components/Post'
+
 class App extends Component {
     state = {
         todos: [
@@ -33,11 +35,13 @@ class App extends Component {
         return (
 
             <div className="container">
-                <Navbar />
+                
                 <BrowserRouter>
+                    <Navbar /> 
                     <Routes>
                         <Route exact path="/" element={<Home />} />
-                        <Route exact path="/about" element={<About/>} />
+                        <Route exact path="/about" element={<About />} />
+                        <Route exact path="/:post_id" element={<Post/>}/>
                     </Routes>
                 </BrowserRouter>
                 <h1 className="center blue-text">Todos</h1>
